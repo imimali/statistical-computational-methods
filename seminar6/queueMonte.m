@@ -53,6 +53,21 @@ end
 P(1,1) = 1-pa;
 P(1,2) = pa;
 P(C,C) = n *pa * ps*((1-ps)^(n-1))+(1-ps)^n;
-matBkSQP(0.2, 0.125, 2, 5,'limited')
+matBkSQP(0.2, 0.125, 2, 5,'limited');
+
+% MMk
+P =zeros(C,C);
+P(1,1) = 1-pa;
+P(1,2) = pa;
+k=3;
+C=5;
+for i = 2:C
+    n = min(k,i-1);
+    rowCandidate = [zeros(1,i-2) n*ps 1-pa-n*ps pa zeros(1,C - i -1)];
+    P(i, :) = rowCandidate(1, 1:C);
+end
+P
+
+
 
 
