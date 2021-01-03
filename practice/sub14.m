@@ -1,6 +1,6 @@
-lambda = 5/4; % 3 per year = 1 every 75 secs is 1 every 5/4 minutes, thus 5 every 4 minutes
+lambda = 4/5; % 3 per year = 1 every 75 secs is 1 every 4/5 minutes, thus 4 every 5 minutes
 % waiting time between poisson events has exponential distribution, thus
-% we will generate an exponential random variable with frequency 5/4
+% we will generate an exponential random variable with frequency 4/5
 % minutes
 err = 1e-3;
 alpha = 0.01;
@@ -12,5 +12,5 @@ for i = 1 : N
 end
 
 
-fprintf('a) P(Y >= 2) = %1.5f\n', 1-mean(Y<2)) % should give around 1 - expcdf(2, 4/5)
+fprintf('a) P(Y >= 2) = %1.5f\n', 1-mean(Y<2)) % should give around 1 - expcdf(2, 5/4)
 fprintf('b) E(Y) = %1.5f\n', mean(Y)) % should give around E(Exp(lambda)) = 1/lambda;
