@@ -1,3 +1,4 @@
+% This is a draft file, things are present mostly one on top of the other, see the other files for cleaner versions
 pa = 1/6;
 ps = 1/4;
 C=4;
